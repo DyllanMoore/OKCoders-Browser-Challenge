@@ -1,0 +1,14 @@
+{
+  "name": "okcoders-browser-challenge",
+  "version": "1.0.0",
+  "description": "Browser challenge for OKCoders",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dyllan Moore",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.4"
+  }
+}
