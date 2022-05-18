@@ -31,62 +31,65 @@ const hogwartsButton = document.getElementById("hogwarts-button");
 const narniaButton = document.getElementById("narnia-button");
 
 function hogwartsButtonClicked() {
-    const current = document.getElementById("hogwarts-button");
-    current.classList.toggle("current");
+    hogwartsButton.classList.toggle("current");
+    rivendellButton.classList.remove("current");
+    narniaButton.classList.remove("current");
 
     runFetch("hogwarts");
 }
 
 function narniaButtonClicked() {
-    const current = document.getElementById("narnia-button");
-    current.classList.toggle("current");
+    narniaButton.classList.toggle("current");
+    hogwartsButton.classList.remove("current");
+    rivendellButton.classList.remove("current");
 
     runFetch("narnia");
 }
 
 function rivendellButtonClicked() {
-    const current = document.getElementById("rivendell-button");
-    current.classList.toggle("current");
+    rivendellButton.classList.toggle("current");
+    hogwartsButton.classList.remove("current");
+    narniaButton.classList.remove("current");
 
     runFetch("rivendell");
 }
 
 function displayCurrentWeatherHogwarts(data) {
-    const weather = data.current;
+    var weather = data.current;
 
-    const currentTemperature = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
-    const currentDementors = document.getElementById("extra").innerHTML = `Chance of Dementors: ${Math.floor(Math.random() * 100)} %`;
-    const currentWindSpeed = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
-    const currentClouds = document.getElementById("clouds").innerHTML = `Cloud Cover: ${weather.cloud}%`;
-    const currentPrecipitation = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
-    const currentWeatherCondition = document.getElementById("descriptor").innerHTML = ` The weather is ${weather.condition.text}.`;
+    const currentTemperatureHogwarts = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
+    const currentDementorsHogwarts = document.getElementById("extra").innerHTML = `Chance of Dementors: ${Math.floor(Math.random() * 100)} %`;
+    const currentWindSpeedHogwarts = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
+    const currentCloudsHogwarts = document.getElementById("clouds").innerHTML = `Cloud Cover: ${weather.cloud}%`;
+    const currentPrecipitationHogwarts = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
+    const currentWeatherConditionHogwarts = document.getElementById("descriptor").innerHTML = ` The weather is ${weather.condition.text}.`;
 
-    return currentTemperature, currentWindSpeed, currentClouds, currentPrecipitation, currentWeatherCondition, currentDementors;
+    return currentTemperatureHogwarts, currentWindSpeedHogwarts, currentCloudsHogwarts, currentPrecipitationHogwarts, currentWeatherConditionHogwarts, currentDementorsHogwarts;
 }
 
 function displayCurrentWeatherNarnia(data) {
-    const weather = data.current;
+    var weather = data.current;
 
-    const currentTemperature = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
-    const currentDementors = document.getElementById("extra").innerHTML = `Chance of Dementors: ${Math.floor(Math.random() * 100)} %`;
-    const currentWindSpeed = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
-    const currentClouds = document.getElementById("clouds").innerHTML = `Cloud Cover: ${weather.cloud}%`;
-    const currentPrecipitation = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
-    const currentWeatherCondition = document.getElementById("descriptor").innerHTML = ` The weather is ${weather.condition.text}.`;
+    const currentTemperatureNarnia = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
+    const currentVisitorsNarnia = document.getElementById("extra").innerHTML = `Chance of Visitors from Closets: ${Math.floor(Math.random() * 100)} %`;
+    const currentWindSpeedNarnia = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
+    const currentCloudsNarnia = document.getElementById("clouds").innerHTML = `Cloud Cover: ${weather.cloud}%`;
+    const currentPrecipitationNarnia = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
+    const currentWeatherConditionNarnia = document.getElementById("descriptor").innerHTML = ` The weather is ${weather.condition.text}.`;
 
-    return currentTemperature, currentWindSpeed, currentClouds, currentPrecipitation, currentWeatherCondition, currentDementors;
+    return currentTemperatureNarnia, currentWindSpeedNarnia, currentCloudsNarnia, currentPrecipitationNarnia, currentWeatherConditionNarnia, currentVisitorsNarnia;
 }
 
 function displayCurrentWeatherRivendell(data) {
-    const weather = data.current;
+    var weather = data.current;
 
-    const currentTemperature = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
-    const currentDementors = document.getElementById("extra").innerHTML = `Chance of Dementors: ${Math.floor(Math.random() * 100)} %`;
-    const currentWindSpeed = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
-    const currentClouds = document.getElementById("clouds").innerHTML = `Cloud Cover: ${weather.cloud}%`;
-    const currentPrecipitation = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
-    const currentWeatherCondition = document.getElementById("descriptor").innerHTML = ` The weather is ${weather.condition.text}.`;
+    const currentTemperatureRivendell = document.getElementById("temperature").innerHTML = `${weather.temp_f} \u00B0 F`;
+    const currentFellowshipsRivendell = document.getElementById("extra").innerHTML = `Chance of Fellowships Formings: ${Math.floor(Math.random() * 100)} %`;
+    const currentWindSpeedRivendell = document.getElementById("wind").innerHTML = `Wind Speed: ${weather.wind_mph} mph`;
+    const currentCloudsRivendell = document.getElementById("clouds").innerHTML = `Cloud Cover: ${weather.cloud}%`;
+    const currentPrecipitationRivendell = document.getElementById("precipitation").innerHTML = `Precipitation: ${weather.precip_in} in.`;
+    const currentWeatherConditionRivendell = document.getElementById("descriptor").innerHTML = ` The weather is ${weather.condition.text}.`;
 
-    return currentTemperature, currentWindSpeed, currentClouds, currentPrecipitation, currentWeatherCondition, currentDementors;
+    return currentTemperatureRivendell, currentWindSpeedRivendell, currentCloudsRivendell, currentPrecipitationRivendell, currentWeatherConditionRivendell, currentFellowshipsRivendell;
 }
 
