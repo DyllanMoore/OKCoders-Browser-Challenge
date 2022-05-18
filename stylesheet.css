@@ -1,0 +1,67 @@
+body {
+  background-image: url(https://www.thefactsite.com/wp-content/uploads/2021/03/hogwarts-school-facts.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.body-container {
+  text-align: center;
+  background: white;
+  width: 60vw;
+  height: 85vh;
+  border-radius: 3%;
+  margin: 0 20vw;
+}
+
+.header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 45pt;
+  margin-bottom: 0;
+  color: #525B76;
+}
+
+.weather-button {
+  font-family: 'Courgette', cursive;
+  font-size: 30pt;
+  margin: 0;
+  color: #525B76;
+  background-color: transparent;
+  border: none;
+}
+
+.weather-button:hover {
+  cursor: pointer;
+  color: #EAB464;
+}
+
+.current {
+  color: #EAB464;
+}
+
+p {
+  display: inline;
+  font-size: 30pt;
+  font-family: 'Courgette', cursive;
+  color: #525B76;
+}
+
+.data {
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  margin: 4vh 3vw;
+  font-size: 15pt;
+  color: #525B76;
+}
+
+#temperature {
+  font-size: 30pt;
+}
+
+#descriptor {
+  font-family: 'Courgette', cursive;
+  color: #EAB464;
+  text-align: center;
+  font-size: 30pt;
+  font-weight: 200;
+}

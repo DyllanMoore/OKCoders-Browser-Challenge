@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheet.css">
+</header>
+
+<body>
+    <div class="body-container weather">
+        <h1 class="header">Today's Forecast</h1>
+        <div class="button-container">
+            <button onClick="rivendellButtonClicked()" class="weather-button" id="rivendell-button">Rivendell</button>
+            <p>-</p>
+            <button onClick="hogwartsButtonClicked()" class="weather-button" id="hogwarts-button">Hogwarts</button>
+            <p>-</p>
+            <button onClick="narniaButtonClicked()" class="weather-button" id="narnia-button">Narnia</button>
+        </div>
+        <h3 class="data" id="temperature"></h3>
+        <h3 class="data" id="extra"></h3>
+        <h3 class="data" id="wind"></h3>
+        <h3 class="data" id="clouds"></h3>
+        <h3 class="data" id="precipitation"></h3>
+        <h2 class="data" id="descriptor"></h2>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+<footer>
+
+</footer>
+
+</html>
